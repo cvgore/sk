@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>🐟🐟 Ryby 🐟🐟</title>
-
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 	<style type="text/css">
-		.hero, .hero-3 {
-			background-color: #06bcfb;
-			background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
-			height: calc(100vh - 56px);
-			position: relative;
-		}
-		.hero-2, .hero-3 {
-			height: 50vh;
-			position: relative;
-		}
-		.mapa {
-			filter: drop-shadow(0px 1px var(--bs-dark));
+	:root {
+		--bs-font-sans-serif: 'Lato', sans-serif;
+	}
+	body {
+		overflow-y: scroll;
+	}
+	.hero, .hero-3 {
+		background-color: #06bcfb;
+		background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
+		height: calc(100vh - 56px);
+		min-height: 670px;
+		position: relative;
+	}
+	.hero-2, .hero-3 {
+		height: 50vh;
+		min-height: 350px;
+		position: relative;
+	}
+	.mapa {
+		filter: drop-shadow(0px 1px var(--bs-dark));
+	}
+	.copyright {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 1rem;
+	}
+	.fish-card {
+		max-width: 26rem;
+	}
+	@media screen and (max-width: 767px) {
+		body {
+			padding-bottom: 2rem;
 		}
 		.copyright {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			padding: 1rem;
+			background: var(--bs-dark);
+			left: 0;
+			position: fixed;
 		}
+	}
 	</style>
 </head>
 <body>
@@ -53,19 +75,19 @@
 
 	<div class="hero">
 		<div class="container h-100">
-			<div class="text text-light h-100">
+			<div class="text text-light text-center text-md-left h-100">
 				<div class="row align-items-center justify-content-center justify-content-md-start h-100">
 					<div class="col-md">
 						<h1 class="display-1">Karp</h1>
 					</div>
 					<div class="col-md">
-						<div class="card shadow align-items-center" style="width: 26rem;">
+						<div class="card shadow align-items-center fish-card">
 							<img src="img/karp.jpg" class="card-img-top">
 							<div class="card-body">
 								<p class="card-title text-dark h5">
 									Karp
 								</p>
-								<p class="card-text text-dark">gatunek słodkowodnej ryby z rodziny karpiowatych. Hodowany i poławiany na dużą skalę jako ryba konsumpcyjna</p>
+								<p class="card-text text-dark">Gatunek słodkowodnej ryby z rodziny karpiowatych. Hodowany i poławiany na dużą skalę jako ryba konsumpcyjna</p>
 							</div>
 						</div>
 					</div>
@@ -76,7 +98,7 @@
 
 	<div class="hero-2">
 		<div class="container h-100">
-			<div class="text text-dark h-100">
+			<div class="text text-dark text-center text-md-left h-100">
 				<div class="row align-items-center justify-content-center justify-content-md-start h-100">
 					<div class="col-md">
 						<p class="display-1">🥺 <span class="badge bg-warning">VU</span></p>
@@ -91,7 +113,7 @@
 
 	<div class="hero-3">
 		<div class="container h-100">
-			<div class="text text-light h-100">
+			<div class="text text-light text-center text-md-left h-100">
 				<div class="row align-items-center justify-content-center justify-content-md-start h-100">
 					<div class="col-md">
 						<p class="display-1">Występowanie</p>
